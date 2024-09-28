@@ -1,0 +1,26 @@
+<div style="font-family: Poppins, sans-serif; background-color: #FFE7F6; color: black; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+  <div style="display: flex;">
+    <div style="flex: 1;">
+      <h2 style="font-size: 59px; font-weight: 600; margin-bottom: 8px;">Learn. Cook. Share.</h2>
+      <h3 style="font-size: 59px; font-weight: 600; margin-bottom: 20px;">Cooking Made Easy.</h3>
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Say goodbye to long and frustrating food blogs and recipe videos. Access our recipe cards to prepare any dish in minutes.</p>
+      <!-- Trigger scroll on click -->
+      <a (click)="scrollToRecipes()" style="display: inline-block; background-color: #FF69B9; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 600;cursor: pointer;">Browse Recipes</a>
+    </div>
+    <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+      <img src="./assets/cake.png" alt="Chocolate Cake" style="max-width: 250%; height: auto; margin-top: -70px; margin-right: -200px;"> 
+    </div>
+  </div>
+</div>
+
+<!-- Recipe Section with id for scrolling -->
+<div id="recipe-section" style="font-family: Poppins, sans-serif; background-color: #FFE7F6; color: black; padding: 20px 0;">
+  <h1 style="text-align: center;">Recipes</h1>
+  <div *ngIf="!loading" class="container">
+    <div class="row justify-content-center">
+      <div *ngFor="let recipe of recipes" class="col-md-4 my-3">
+        <app-recipeitem [data]="recipe"></app-recipeitem>
+      </div>
+    </div>
+  </div>
+</div>
