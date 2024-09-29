@@ -1,4 +1,5 @@
 # Tempting Treats
+You can redirect to this url : https://temptingtreats.vercel.app/home to see the website
 
 ## Overview
 Tempting Treats is a recipe web application designed to provide users with a wide variety of delicious recipes. Built using Angular, HTML, CSS, and TypeScript, this app allows users to explore, save, and share their favorite recipes in an intuitive and visually appealing interface.
